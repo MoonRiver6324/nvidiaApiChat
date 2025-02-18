@@ -1,10 +1,12 @@
 # NVIDIA API Chat
 
+在本地网页中调用NVIDIA API
+
 ## 使用说明
 
 1. 安装依赖
 
-本地安装好node(https://nodejs.org/zh-cn/download)，并确认npm加入环境变量
+本地安装好node( https://nodejs.org/zh-cn/download )，并确认npm加入环境变量
 
 2. 获取NVIDIA API Key
 
@@ -25,7 +27,7 @@ npm start
 
 直接开始对话，支持流式传输，在线解析markdown
 
-4. 注意
+## 注意
 
 默认使用deepseek r1模型，如果需要使用其他模型，请根据nvidia api文档在server.js中修改。
 
