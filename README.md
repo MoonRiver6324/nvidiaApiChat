@@ -1,6 +1,8 @@
 # NVIDIA API Chat
 
-在本地网页中调用NVIDIA API
+在本地网页中调用NVIDIA API，支持流式传输、在线markdown解析。
+
+基于原生Javascript实现，避免了繁琐的配置过程。
 
 ## 使用说明
 
