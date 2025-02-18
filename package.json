@@ -1,0 +1,14 @@
+{
+  "name": "nvidia-nim-chat",
+  "version": "1.0.0",
+  "description": "A web interface for NVIDIA NIM API",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "openai": "^4.28.0",
+    "dotenv": "^16.4.1"
+  }
+} 

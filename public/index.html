@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NVIDIA API Chat</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- 使用完整的 highlight.js CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/atom-one-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/languages/go.min.js"></script>
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+    <div class="flex h-screen">
+        <!-- 侧边栏 -->
+        <div class="w-64 bg-gray-800 text-white p-4 flex flex-col">
+            <button id="newChatBtn" class="bg-gray-700 hover:bg-gray-600 text-white py-2 px-4 rounded mb-4">
+                新建聊天
+            </button>
+            <div id="chatList" class="flex-1 overflow-y-auto">
+                <!-- 聊天历史将在这里动态添加 -->
+            </div>
+        </div>
+
+        <!-- 主聊天区域 -->
+        <div class="flex-1 flex flex-col">
+            <!-- 聊天记录 -->
+            <div id="chatMessages" class="flex-1 overflow-y-auto p-4 space-y-4">
+                <div class="welcome-message text-center py-8">
+                    <h1 class="text-4xl font-bold mb-4">欢迎使用 NIM Chat</h1>
+                    <p class="text-gray-600">基于 NVIDIA NIM API 的智能对话系统</p>
+                </div>
+            </div>
+
+            <!-- 输入区域 -->
+            <div class="border-t p-4 bg-white">
+                <div class="flex space-x-4">
+                    <textarea id="userInput" 
+                        class="flex-1 border rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-blue-400"
+                        placeholder="输入您的问题..."
+                        rows="3"></textarea>
+                    <button id="sendBtn" 
+                        class="bg-blue-500 hover:bg-blue-600 text-white px-6 py-2 rounded-lg self-end">
+                        发送
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/marked@4.2.12/marked.min.js"></script>
+    <script>
+        // 等待页面加载完成
+        document.addEventListener('DOMContentLoaded', function() {
+            // 初始化 highlight.js
+            if (window.hljs) {
+                hljs.configure({
+                    ignoreUnescapedHTML: true
+                });
+                hljs.highlightAll();
+            }
+        });
+    </script>
+    <script src="app.js"></script>
+</body>
+</html> 
